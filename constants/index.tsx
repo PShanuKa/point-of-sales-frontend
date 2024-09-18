@@ -29,90 +29,88 @@ export const HorizontalNavMainLinks: NavLinks[] = [
   {
     label: 'Dashboard',
     route: '/dashboard',
-    icon: <MdOutlineDashboard /> // Use a function to return the JSX
+    icon: () => <MdOutlineDashboard /> // Use a function to return the JSX
   },
-  
 ];
 
 export const HorizontalNavInventoryLinks: NavLinks[] = [
   {
     label: 'Products',
     route: '/dashboard/products',
-    icon: <PiCube /> // Use a function to return the JSX
+    icon: () => <PiCube />
   },
   {
     label: 'Create Products',
     route: '/create-products',
-    icon: <TbCubePlus />
+    icon: () => <TbCubePlus />
   },
   {
     label: 'Expired Product',
     route: '/expired-product',
-    icon: <GiIceCube />
+    icon: () => <GiIceCube />
   },
   {
     label: 'Low Stocks',
     route: '/low-stocks',
-    icon: <FaArrowTrendDown />
+    icon: () => <FaArrowTrendDown />
   },
   {
     label: 'Category',
     route: '/low-stocks',
-    icon: <GrCubes />
+    icon: () => <GrCubes />
   },
   {
     label: 'Sub Category',
     route: '/low-stocks',
-    icon: <FaCubesStacked />
+    icon: () => <FaCubesStacked />
   },
   {
     label: 'Brands',
     route: '/low-stocks',
-    icon: <FiTag />
+    icon: () => <FiTag />
   },
   {
     label: 'Units',
     route: '/low-stocks',
-    icon: <CgNametag />
+    icon: () => <CgNametag />
   },
   {
     label: 'Variant Attributes',
     route: '/low-stocks',
-    icon: <RiPriceTagLine />
+    icon: () => <RiPriceTagLine />
   },
   {
     label: 'Warranties',
     route: '/low-stocks',
-    icon: <FaArrowTrendDown />
+    icon: () => <FaArrowTrendDown />
   },
   {
     label: 'Print Barcode',
     route: '/low-stocks',
-    icon: <FaBarcode />
+    icon: () => <FaBarcode />
   },
   {
     label: 'Print QR Code',
     route: '/low-stocks',
-    icon: <MdOutlineQrCode2 />
+    icon: () => <MdOutlineQrCode2 />
   },
- 
 ];
 
 export const HorizontalNavStockLinks: NavLinks[] = [
   {
     label: 'Manage Stock',
     route: '/',
-    icon: <BsBoxSeam /> // Use a function to return the JSX
+    icon: () => <BsBoxSeam />
   },
   {
     label: 'Stock Adjustment',
     route: '/create-products',
-    icon: <MdEditNote />
+    icon: () => <MdEditNote />
   },
   {
     label: 'Stock Transfer',
     route: '/expired-product',
-    icon: <FaCarSide />
+    icon: () => <FaCarSide />
   },
 ];
 
@@ -120,7 +118,7 @@ export const HorizontalNavPromoLinks: NavLinks[] = [
   {
     label: 'Coupons',
     route: '/',
-    icon: <BsBoxSeam /> // Use a function to return the JSX
+    icon: () => <BsBoxSeam />
   },
 ];
 
@@ -128,17 +126,17 @@ export const HorizontalNavPurchasesLinks: NavLinks[] = [
   {
     label: 'Purchases',
     route: '/',
-    icon: <FiShoppingBag /> 
+    icon: () => <FiShoppingBag />
   },
   {
     label: 'Purchases Order',
     route: '/',
-    icon: <FaRegFileAlt /> 
+    icon: () => <FaRegFileAlt />
   },
   {
     label: 'Purchases Return',
     route: '/',
-    icon: <GiReturnArrow /> 
+    icon: () => <GiReturnArrow />
   },
 ];
 
@@ -146,30 +144,30 @@ export const HorizontalNavFinanceAndAccountsLinks: NavLinks[] = [
   {
     label: 'Expenses',
     route: '/',
-    icon: <BsBoxSeam /> ,
+    icon: () => <BsBoxSeam />,
     children: [
       {
         label: 'Expenses',
         route: '/'
-      },{
+      },
+      {
         label: 'Expenses Category',
         route: '/'
       }
     ]
   },
-  
 ];
 
 export const HorizontalNavPeopleLinks: NavLinks[] = [
-
   {
     label: 'Purchases Return',
     route: '/',
-    icon: <BsBoxSeam /> , // Use a function to return the JSX
+    icon: () => <BsBoxSeam />,
     children: [
-      { label: 'Purchases Return',
+      {
+        label: 'Purchases Return',
         route: '/'
       }
-    ], 
+    ]
   },
 ];
