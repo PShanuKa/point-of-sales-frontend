@@ -143,7 +143,7 @@ export const HorizontalNavPurchasesLinks: NavLinks[] = [
 export const HorizontalNavFinanceAndAccountsLinks: NavLinks[] = [
   {
     label: 'Expenses',
-    route: '/',
+    route: '/dashboard',
     icon: () => <BsBoxSeam />,
     children: [
       {
