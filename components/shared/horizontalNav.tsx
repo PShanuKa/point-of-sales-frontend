@@ -106,7 +106,7 @@ const ListItems = ({ title, data }: ListItemsProps) => {
                 }}
               >
                 <div className="w-16 h-10 justify-center items-center flex">
-                  {item.icon}
+                {item.icon && item.icon()}
                 </div>
                 <span
                   className={`${
