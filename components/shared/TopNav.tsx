@@ -24,7 +24,7 @@ const TopNav = () => {
     <nav className="flex flex-row w-full top-0 left-0 right-0 fixed z-30">
       <div
         className={` ${
-          openHorizontalNav ? "min-w-[250px] " : "min-w-16"
+          openHorizontalNav ? "md:min-w-[250px] " : "md:min-w-16 w-0"
         } transition-all ease-in-out duration-500`}
       ></div>
       <div className="flex h-16 py-3 px-6 border-b bg-white items-center justify-between w-full">

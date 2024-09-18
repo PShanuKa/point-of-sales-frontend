@@ -2,10 +2,12 @@ import { createSlice } from '@reduxjs/toolkit'
 
 export interface ThemeState {
   openHorizontalNav: boolean
+  openMobileNav: boolean
 }
 
 const initialState: ThemeState = {
-  openHorizontalNav: true,
+  openHorizontalNav: false,
+  openMobileNav: false
 }
 
 export const ThemeSlice = createSlice({
@@ -15,10 +17,13 @@ export const ThemeSlice = createSlice({
     horizontalToggle: (state) => {
       state.openHorizontalNav = !state.openHorizontalNav
     },
+    mobileNavToggle: (state) => {
+      state.openMobileNav = !state.openMobileNav
+    },
   },
 })
 
 
-export const { horizontalToggle } = ThemeSlice.actions
+export const { horizontalToggle,mobileNavToggle } = ThemeSlice.actions
 
 export default ThemeSlice.reducer
