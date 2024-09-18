@@ -1,12 +1,12 @@
 "use client";
-import { horizontalToggle, mobileNavToggle } from "@/lib/features/ThemeSlice";
+import { horizontalToggle } from "@/lib/features/ThemeSlice";
 import { FaAnglesLeft } from "react-icons/fa6";
 import { RootState } from "@/lib/store";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { MdOutlineDashboard } from "react-icons/md";
+
 import { GoDotFill } from "react-icons/go";
-import { FaChevronCircleDown } from "react-icons/fa";
+
 import { FaAngleDown } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 import {
@@ -25,9 +25,7 @@ const HorizontalNav = () => {
   const openHorizontalNav = useSelector(
     (state: RootState) => state.theme.openHorizontalNav
   );
-  // const openMobileNav = useSelector(
-  //   (state: RootState) => state.theme.openMobileNav
-  // )
+
   
   return (
     <div
