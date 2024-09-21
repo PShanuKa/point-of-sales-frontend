@@ -15,15 +15,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
   return (
     <div>
-      <TopNav />
-      <HorizontalNav />
+      {/* <TopNav />
+      <HorizontalNav /> */}
       
       <div
         className={`  pt-16  ${
           openHorizontalNav ? "md:pl-[250px]" : "md:pl-16"
-        } transition-all ease-in-out duration-500 flex bg-slate-50`}
+        } transition-all ease-in-out duration-500 flex bg-slate-100`}
       >
-        <main className="w-full h-screen m-3">{children}</main>
+        <main className="w-full h-screen m-3 ">{children}</main>
       </div>
     </div>
   );
