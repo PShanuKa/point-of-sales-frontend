@@ -41,7 +41,7 @@ export const HorizontalNavInventoryLinks: NavLinks[] = [
   },
   {
     label: 'Create Products',
-    route: '/create-products',
+    route: '/create-product',
     icon: () => <TbCubePlus />
   },
   {
