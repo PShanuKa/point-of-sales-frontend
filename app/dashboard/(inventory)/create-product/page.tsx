@@ -28,6 +28,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ChevronDown } from "lucide-react";
 
 const page = () => {
   return (
@@ -50,6 +51,7 @@ const page = () => {
         <AccordionItem value="item-1">
           <AccordionTrigger className="p-3 font-semibold border-b">
           Product Information
+          <ChevronDown size={16} className="h-4 w-4 shrink-0 transition-transform duration-200" />
           </AccordionTrigger>
           <AccordionContent className="p-3 flex flex-col gap-6">
           {/* ----------------------------------------------------------------------------------- */}
@@ -291,6 +293,7 @@ const page = () => {
         <AccordionItem value="item-2">
           <AccordionTrigger className="p-3 font-semibold border-b">
             Pricing & Stocks
+            <ChevronDown size={16} className="h-4 w-4 shrink-0 transition-transform duration-200" />
           </AccordionTrigger>
           <AccordionContent className="p-3 flex flex-col gap-6 mb-5">
             {/* ----------------------------------------------------------------------------------- */}
@@ -374,6 +377,7 @@ const page = () => {
         <AccordionItem value="item-3">
           <AccordionTrigger className="p-3 font-semibold border-b">
           Images
+          <ChevronDown size={16} className="h-4 w-4 shrink-0 transition-transform duration-200" />
           </AccordionTrigger>
           <AccordionContent className="p-3 flex flex-col gap-6 mb-5">
             
@@ -390,6 +394,7 @@ const page = () => {
         <AccordionItem value="item-4">
           <AccordionTrigger className="p-3 font-semibold border-b ">
             Custom Fields
+            <ChevronDown size={16} className="h-4 w-4 shrink-0 transition-transform duration-200" />
           </AccordionTrigger>
           <AccordionContent className="p-3 flex flex-col gap-6">
             <div className="flex  gap-5 p-3">
@@ -489,7 +494,7 @@ const page = () => {
 
 export default page;
 
-const PopupButton = ({ children, type, title }: any) => {
+const PopupButton = ({ children,  title }: { children: React.ReactNode, title: string }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -510,3 +515,8 @@ const PopupButton = ({ children, type, title }: any) => {
     </Dialog>
   );
 };
+
+
+
+
+

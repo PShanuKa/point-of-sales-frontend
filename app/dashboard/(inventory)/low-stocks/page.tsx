@@ -2,10 +2,9 @@ import React from "react";
 import PageTitle from "@/components/shared/PageTitle";
 import { Button } from "@/components/ui/button";
 import { FaRegFilePdf } from "react-icons/fa6";
-import { IoMdDownload } from "react-icons/io";
+
 import { TbReload } from "react-icons/tb";
-import { FiPrinter, FiPlusCircle } from "react-icons/fi";
-import { CiFilter } from "react-icons/ci";
+import { FiPrinter} from "react-icons/fi";
 import {
   Table,
   TableBody,
@@ -16,28 +15,17 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Input } from "@/components/ui/input";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { CiFilter } from "react-icons/ci";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
 
 const page = () => {
   return (
     <div className="flex flex-col gap-5">
       <div className="p-3 flex justify-between">
-        <PageTitle title="Product List" description="Manage your products" />
+        <PageTitle title="Low Stocks" description="Manage your low stocks" />
         <div className="flex gap-3">
           <Button variant="outline" className="bg-white">
             <FaRegFilePdf size={20} />
@@ -48,17 +36,8 @@ const page = () => {
           <Button variant="outline" className="bg-white">
             <TbReload size={20} />
           </Button>
-          <Button variant="default" className="gap-2">
-            <FiPlusCircle size={20} />
-            Add New Product
-          </Button>
-          <Button variant="default" className="gap-2">
-            <IoMdDownload size={20} />
-            Add New Product
-          </Button>
         </div>
       </div>
-      {/* ---------------------filter */}
       <div>
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1" className="border-none">
@@ -73,7 +52,9 @@ const page = () => {
                 </div>
               </AccordionTrigger>
             </div>
+
             <AccordionContent className="p-3 bg-white mt-3 rounded-lg grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+
             <div className="flex flex-col gap-1  ">
               <h1 className="font-semibold opacity-70 text-sm my-1">
                 Choose Product
@@ -89,9 +70,11 @@ const page = () => {
                 </SelectContent>
               </Select>
             </div>
+            
+            
             <div className="flex flex-col gap-1  ">
               <h1 className="font-semibold opacity-70 text-sm my-1">
-              Choose Category
+              Choose Warehouse
               </h1>
               <Select >
                 <SelectTrigger className="w-full">
@@ -104,56 +87,11 @@ const page = () => {
                 </SelectContent>
               </Select>
             </div>
-            <div className="flex flex-col gap-1  ">
-              <h1 className="font-semibold opacity-70 text-sm my-1">
-              Choose Sub Category
-              </h1>
-              <Select >
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Theme" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="light">Light</SelectItem>
-                  <SelectItem value="dark">Dark</SelectItem>
-                  <SelectItem value="system">System</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <div className="flex flex-col gap-1  ">
-              <h1 className="font-semibold opacity-70 text-sm my-1">
-              Choose Brand
-              </h1>
-              <Select >
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Theme" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="light">Light</SelectItem>
-                  <SelectItem value="dark">Dark</SelectItem>
-                  <SelectItem value="system">System</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <div className="flex flex-col gap-1  ">
-              <h1 className="font-semibold opacity-70 text-sm my-1">
-              Choose Price Range
-              </h1>
-              <Select >
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Theme" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="light">Light</SelectItem>
-                  <SelectItem value="dark">Dark</SelectItem>
-                  <SelectItem value="system">System</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
+           
             </AccordionContent>
           </AccordionItem>
         </Accordion>
       </div>
-      {/* ---------------------filter end------------------------------------- */}
 
       <div>
         <ProductTable />
@@ -208,36 +146,37 @@ const ProductTable = () => {
   return (
     <Table>
       <TableCaption>
-        <Pagination>
-          <PaginationContent>
-            <PaginationItem>
-              <PaginationPrevious href="#" />
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationLink href="#">1</PaginationLink>
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationLink href="#">2</PaginationLink>
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationEllipsis />
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationNext href="#" />
-            </PaginationItem>
-          </PaginationContent>
-        </Pagination>
+      <Pagination>
+  <PaginationContent>
+    <PaginationItem>
+      <PaginationPrevious href="#" />
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationLink href="#">1</PaginationLink>
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationLink href="#">2</PaginationLink>
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationEllipsis />
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationNext href="#" />
+    </PaginationItem>
+  </PaginationContent>
+</Pagination>
+
       </TableCaption>
       <TableHeader>
         <TableRow>
-          <TableHead>#</TableHead>
-          <TableHead>Products</TableHead>
-          <TableHead>SKU</TableHead>
+          <TableHead >#</TableHead>
+          <TableHead>Warehouse</TableHead>
+          <TableHead>Store</TableHead>
+          <TableHead>Product</TableHead>
           <TableHead>Category</TableHead>
-          <TableHead>Price</TableHead>
-          <TableHead>Unit</TableHead>
-          <TableHead>Qty</TableHead>
-          <TableHead>Create By</TableHead>
+          <TableHead>SKU</TableHead>
+          <TableHead>QTY</TableHead>
+          <TableHead>QTY Alert</TableHead>
           <TableHead>Action</TableHead>
         </TableRow>
       </TableHeader>
@@ -245,7 +184,7 @@ const ProductTable = () => {
         {tableData.map((item, index) => (
           <TableRow key={index}>
             <TableCell>{index + 1}</TableCell>
-            <TableCell>{item.Product}</TableCell>
+            <TableCell >{item.Product}</TableCell>
             <TableCell>{item.SKU}</TableCell>
             <TableCell>{item.ManufacturedDate}</TableCell>
             <TableCell>{item.ExpiredDate}</TableCell>

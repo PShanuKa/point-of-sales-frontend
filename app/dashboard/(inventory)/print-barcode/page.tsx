@@ -22,7 +22,7 @@ const page = () => {
   return (
     <div className="flex flex-col gap-5">
       <div className="p-3 flex justify-between">
-        <PageTitle title="Expired Products" description="Manage your expired products" />
+        <PageTitle title="Print Barcode" description="Manage your barcodes" />
         <div className="flex gap-3">
           <Button variant="outline" className="bg-white">
             <FaRegFilePdf size={20} />

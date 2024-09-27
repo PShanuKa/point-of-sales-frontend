@@ -2,10 +2,9 @@ import React from "react";
 import PageTitle from "@/components/shared/PageTitle";
 import { Button } from "@/components/ui/button";
 import { FaRegFilePdf } from "react-icons/fa6";
-import { IoMdDownload } from "react-icons/io";
+
 import { TbReload } from "react-icons/tb";
-import { FiPrinter, FiPlusCircle } from "react-icons/fi";
-import { CiFilter } from "react-icons/ci";
+import { FiPlusCircle, FiPrinter } from "react-icons/fi";
 import {
   Table,
   TableBody,
@@ -31,13 +30,28 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { CiFilter } from "react-icons/ci";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const page = () => {
   return (
     <div className="flex flex-col gap-5">
       <div className="p-3 flex justify-between">
-        <PageTitle title="Product List" description="Manage your products" />
+        <PageTitle title="Category" description="Manage your categories" />
         <div className="flex gap-3">
           <Button variant="outline" className="bg-white">
             <FaRegFilePdf size={20} />
@@ -48,14 +62,32 @@ const page = () => {
           <Button variant="outline" className="bg-white">
             <TbReload size={20} />
           </Button>
-          <Button variant="default" className="gap-2">
-            <FiPlusCircle size={20} />
-            Add New Product
-          </Button>
-          <Button variant="default" className="gap-2">
-            <IoMdDownload size={20} />
-            Add New Product
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button
+                variant="outline"
+                className="bg-white flex gap-2 items-center"
+              >
+                <FiPlusCircle size={16} />
+                Add new Category
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle>Add new Category</DialogTitle>
+              </DialogHeader>
+              <div className="flex flex-col gap-1">
+                <h1 className="font-semibold opacity-70 text-sm my-1">
+                  Category Name
+                </h1>
+                <Input />
+              </div>
+
+              <DialogFooter>
+                <Button type="submit">Save</Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
       {/* ---------------------filter */}
@@ -74,81 +106,20 @@ const page = () => {
               </AccordionTrigger>
             </div>
             <AccordionContent className="p-3 bg-white mt-3 rounded-lg grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-            <div className="flex flex-col gap-1  ">
-              <h1 className="font-semibold opacity-70 text-sm my-1">
-                Choose Product
-              </h1>
-              <Select >
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Theme" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="light">Light</SelectItem>
-                  <SelectItem value="dark">Dark</SelectItem>
-                  <SelectItem value="system">System</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <div className="flex flex-col gap-1  ">
-              <h1 className="font-semibold opacity-70 text-sm my-1">
-              Choose Category
-              </h1>
-              <Select >
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Theme" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="light">Light</SelectItem>
-                  <SelectItem value="dark">Dark</SelectItem>
-                  <SelectItem value="system">System</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <div className="flex flex-col gap-1  ">
-              <h1 className="font-semibold opacity-70 text-sm my-1">
-              Choose Sub Category
-              </h1>
-              <Select >
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Theme" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="light">Light</SelectItem>
-                  <SelectItem value="dark">Dark</SelectItem>
-                  <SelectItem value="system">System</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <div className="flex flex-col gap-1  ">
-              <h1 className="font-semibold opacity-70 text-sm my-1">
-              Choose Brand
-              </h1>
-              <Select >
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Theme" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="light">Light</SelectItem>
-                  <SelectItem value="dark">Dark</SelectItem>
-                  <SelectItem value="system">System</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <div className="flex flex-col gap-1  ">
-              <h1 className="font-semibold opacity-70 text-sm my-1">
-              Choose Price Range
-              </h1>
-              <Select >
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Theme" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="light">Light</SelectItem>
-                  <SelectItem value="dark">Dark</SelectItem>
-                  <SelectItem value="system">System</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
+              <div className="flex flex-col gap-1  ">
+                <h1 className="font-semibold opacity-70 text-sm my-1">
+                  Choose Status
+                </h1>
+                <Select>
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="Theme" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="light">Active</SelectItem>
+                    <SelectItem value="dark">Inactive</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
@@ -231,13 +202,10 @@ const ProductTable = () => {
       <TableHeader>
         <TableRow>
           <TableHead>#</TableHead>
-          <TableHead>Products</TableHead>
-          <TableHead>SKU</TableHead>
           <TableHead>Category</TableHead>
-          <TableHead>Price</TableHead>
-          <TableHead>Unit</TableHead>
-          <TableHead>Qty</TableHead>
-          <TableHead>Create By</TableHead>
+          <TableHead>Category Slug</TableHead>
+          <TableHead>Created On</TableHead>
+          <TableHead>Status</TableHead>
           <TableHead>Action</TableHead>
         </TableRow>
       </TableHeader>

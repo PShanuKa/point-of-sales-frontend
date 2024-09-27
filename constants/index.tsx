@@ -46,52 +46,52 @@ export const HorizontalNavInventoryLinks: NavLinks[] = [
   },
   {
     label: 'Expired Product',
-    route: '/dashboard/expired-product',
+    route: '/dashboard/expired-products',
     icon: () => <GiIceCube />
   },
   {
     label: 'Low Stocks',
-    route: '/low-stocks',
+    route: '/dashboard/low-stocks',
     icon: () => <FaArrowTrendDown />
   },
   {
     label: 'Category',
-    route: '/low-stocks',
+    route: '/dashboard/category',
     icon: () => <GrCubes />
   },
   {
     label: 'Sub Category',
-    route: '/low-stocks',
+    route: '/dashboard/sub-category',
     icon: () => <FaCubesStacked />
   },
   {
     label: 'Brands',
-    route: '/low-stocks',
+    route: '/dashboard/brands',
     icon: () => <FiTag />
   },
   {
     label: 'Units',
-    route: '/low-stocks',
+    route: '/dashboard/units',
     icon: () => <CgNametag />
   },
   {
     label: 'Variant Attributes',
-    route: '/low-stocks',
+    route: '/dashboard/variant-attributes',
     icon: () => <RiPriceTagLine />
   },
   {
     label: 'Warranties',
-    route: '/low-stocks',
+    route: '/dashboard/warranties',
     icon: () => <FaArrowTrendDown />
   },
   {
     label: 'Print Barcode',
-    route: '/low-stocks',
+    route: '/dashboard/print-barcode',
     icon: () => <FaBarcode />
   },
   {
     label: 'Print QR Code',
-    route: '/low-stocks',
+    route: '/dashboard/print-qrcode',
     icon: () => <MdOutlineQrCode2 />
   },
 ];
