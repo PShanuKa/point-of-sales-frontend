@@ -113,7 +113,7 @@ const page = () => {
             <div className="flex flex-col gap-1">
               <div className="flex justify-between my-1">
                 <h1 className="font-semibold opacity-70 text-sm ">Category</h1>
-                <PopupButton type="category-add" title="Add Category">
+                <PopupButton  title="Add Category">
                   <div className="flex flex-col gap-1 my-10">
                     <h1 className="font-semibold opacity-70 text-sm">
                       Category Name
@@ -139,7 +139,7 @@ const page = () => {
                 <h1 className="font-semibold opacity-70 text-sm">
                   Sub Category
                 </h1>
-                <PopupButton type="sub-category-add" title="Add Sub Category">
+                <PopupButton title="Add Sub Category">
                   <div className="flex flex-col gap-1 my-10">
                     <h1 className="font-semibold opacity-70 text-sm">
                       Sub Category Name
@@ -183,7 +183,7 @@ const page = () => {
             <div className="flex flex-col gap-1">
               <div className="flex justify-between my-1">
                 <h1 className="font-semibold opacity-70 text-sm ">Brand</h1>
-                <PopupButton type="brand-add" title="Add Brand">
+                <PopupButton  title="Add Brand">
                   <div className="flex flex-col gap-1 my-10">
                     <h1 className="font-semibold opacity-70 text-sm">
                       Brand Name
@@ -208,7 +208,7 @@ const page = () => {
               <div className="flex justify-between my-1">
                 <h1 className="font-semibold opacity-70 text-sm">Unit</h1>
                 {/* <AddSubCategory /> */}
-                <PopupButton type="product-add" title="Add Unit">
+                <PopupButton  title="Add Unit">
                   <div className="flex flex-col gap-1 my-10">
                     <h1 className="font-semibold opacity-70 text-sm">
                       Unit Name
