@@ -41,12 +41,12 @@ export const HorizontalNavInventoryLinks: NavLinks[] = [
   },
   {
     label: 'Create Products',
-    route: '/create-product',
+    route: '/dashboard/create-product',
     icon: () => <TbCubePlus />
   },
   {
     label: 'Expired Product',
-    route: '/expired-product',
+    route: '/dashboard/expired-product',
     icon: () => <GiIceCube />
   },
   {

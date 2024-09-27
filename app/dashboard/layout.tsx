@@ -15,8 +15,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
   return (
     <div>
-     {/* <TopNav />
-      <HorizontalNav />  */}
+     <TopNav />
+      <HorizontalNav /> 
       
       <div
         className={`  pt-16  ${
